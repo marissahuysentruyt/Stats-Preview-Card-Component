@@ -1,0 +1,223 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Lexend+Deca&display=swap');
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    font-size: 15px;
+    background-color: hsl(233, 47%, 7%);
+}
+
+.stats-container {
+    /* border: 1px solid red; */
+    display: flex;
+    flex-basis: 100%;
+    width: 80%;
+    height: 65%;
+    margin: 10% auto;
+    border-radius: 12px;
+    background-color: hsl(244, 38%, 16%);
+}
+
+.card {
+    color: #fff;
+    /* border: 1px solid red; */
+    padding: 6%;
+    display: flex;
+    flex-direction: column;
+    flex-basis: 50%;
+    align-items: center;
+}
+
+.card h1.tagline {
+    color: #fff;
+    font-family: "Inter";
+    font-weight: 700;
+    font-size: 2em;
+    /* letter-spacing: 0.04em; */
+    margin-bottom: 10%;
+}
+
+.card span {
+    /* border: 1px solid red; */
+    color: hsl(277, 64%, 61%);
+}
+
+.card p {
+    /* border: 1px solid red; */
+    color: rgba(255, 255, 255, 0.6);
+    font-family: "Lexend Deca";
+    font-weight: 400;
+    line-height: 140%;   
+}
+
+#stats-grid {
+    /* border: 1px solid red; */
+    display: grid;
+    width: 100%;
+    margin-top: 20%;
+    grid-template-areas: 
+        "stat1 stat2 stat3"
+        "heading1 heading2 heading3";
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 50% 50%;
+}
+
+#stats-grid .stat1 {
+    grid-area: stat1;
+}
+#stats-grid .stat2 {
+    grid-area: stat2;
+}
+#stats-grid .stat3 {
+    grid-area: stat3;
+}
+#stats-grid .heading1 {
+    grid-area: heading1;
+}
+#stats-grid .heading2 {
+    grid-area: heading2;
+}
+#stats-grid .heading3 {
+    grid-area: heading3;
+}
+
+#stats-grid h1 {
+    color: #fff;
+    font-family: "Inter";
+    font-weight: 700;
+    font-size: 1.25em;
+    letter-spacing: 0.06em;
+
+}
+
+#stats-grid h4 {
+    color: rgba(255, 255, 255, 0.6);
+    font-family: "Lexend Deca";
+    font-weight: 400;
+    line-height: 140%; 
+    padding-top: 5%;
+    text-transform: uppercase;
+    font-size: 12px;
+    letter-spacing: 0.06em;
+
+}
+
+.image-container {
+    /* border: 1px solid red; */
+    flex-basis: 50%;
+    background: url("images/image-header-desktop.jpg"), 
+    hsla(277, 64%, 61%, 1);
+    background-blend-mode: multiply;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-top-right-radius: 12px;
+    border-bottom-right-radius: 12px;
+    
+}
+
+@media only screen and (max-width: 768px) {
+    .stats-container {
+        /* border: 1px solid red; */
+        flex-direction: column-reverse;
+        width: 80%;
+        height: 70em;
+        border-radius: 12px;
+    } 
+
+    .card {
+        /* border: 1px solid red; */
+        height: 20em;
+        flex-basis: 65%;
+        text-align: center;
+        margin: 10% auto 5% auto;
+        padding: 0 10%;
+    }
+
+    .card h1.tagline {
+        font-size: 2.5em;
+    }
+
+    .card p {
+        font-size: 1.25em;
+    }
+
+    #stats-grid {
+        /* border: 1px solid red; */
+        grid-template-areas: 
+            "stat1"
+            "heading1"
+            "stat2"
+            "heading2"
+            "stat3"
+            "heading3";
+        grid-template-columns: 100%;
+        grid-template-rows: auto auto auto auto auto auto;
+        margin-top: 15%;
+    }
+
+    #stats-grid h1 {
+        font-size: 2em;
+        padding-bottom: 0;
+    }
+    #stats-grid h4 {
+        font-size: 1.25em;
+        padding-top: 2%;
+        padding-bottom: 7.5%;
+    }
+
+
+    .image-container {
+        height: 10em;
+        flex-basis: 35%;
+        border-top-left-radius: 12px;
+        border-top-right-radius: 12px;
+        border-bottom-right-radius: 0px;
+    }
+}
+
+
+@media only screen and (max-width: 375px) {
+    .stats-container {
+        /* border: 1px solid red; */
+        flex-direction: column-reverse;
+        width: 85%;
+        height: 50em;
+        border-radius: 12px;
+    } 
+
+    .card {
+        /* border: 1px solid red; */
+        height: 40em;
+        margin-bottom: 4%;
+    }
+
+    .card h1.tagline {
+        font-size: 1.5em;
+    }
+
+    
+
+    .card p {
+        font-size: 0.9em;
+    }
+
+    #stats-grid {
+        /* border: 1px solid red; */
+        margin-top: 15%;
+    }
+
+    #stats-grid h4 {
+        font-size: 0.85em;
+    }
+
+    .image-container {
+        /* border: 1px solid red; */
+        height: 10em;
+    }
+}
+
